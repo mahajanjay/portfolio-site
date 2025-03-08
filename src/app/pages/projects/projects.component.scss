@@ -5,6 +5,7 @@
 .section-description {
   max-width: 800px;
   margin: 0 auto;
+  color: var(--text-color);
 }
 
 .project-filters {
@@ -16,7 +17,8 @@
   border: none;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
+  background-color: var(--card-bg);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
@@ -26,6 +28,10 @@
     .project-links {
       opacity: 1;
     }
+  }
+
+  .card-title, .card-text {
+    color: var(--text-color);
   }
 }
 
@@ -76,6 +82,12 @@
 
 .technologies {
   margin-top: 15px;
+}
+
+.alert-info {
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  border-color: var(--border-color);
 }
 
 @media (max-width: 768px) {

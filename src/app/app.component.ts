@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portfolio-site';
   
-  constructor() {
+  constructor(private themeService: ThemeService) {
     // Placeholder for images info
     console.log('Note: This app requires placeholder images to be added to assets/images folder');
     console.log('Create the following images:');
@@ -16,5 +17,8 @@ export class AppComponent {
     console.log('- assets/images/about.svg - Image for about section on home page');
     console.log('- assets/images/profile.jpg - Profile photo for about page');
     console.log('- assets/images/project1.jpg to project4.jpg - Project images');
+    
+    // Initialize theme (this will check localStorage or system preference)
+    this.themeService.initTheme();
   }
 }

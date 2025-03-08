@@ -8,8 +8,8 @@
 
 .about-image {
   max-width: 300px;
-  border: 5px solid white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--card-bg);
+  box-shadow: var(--card-shadow);
 }
 
 .social-links {
@@ -24,7 +24,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--light-color);
+  background-color: var(--bg-secondary);
   color: var(--primary-color);
   transition: all 0.3s ease;
   
@@ -38,11 +38,20 @@
 .about-card {
   border: none;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
+  background-color: var(--card-bg);
   transition: transform 0.3s ease;
   
   &:hover {
     transform: translateY(-5px);
+  }
+
+  .card-body {
+    color: var(--text-color);
+  }
+
+  .card-title {
+    color: var(--text-color);
   }
 }
 
@@ -58,7 +67,7 @@
     bottom: 0;
     left: 0;
     width: 2px;
-    background-color: var(--light-color);
+    background-color: var(--border-color);
   }
 }
 
@@ -85,10 +94,12 @@
   h4 {
     margin-bottom: 5px;
     font-weight: 600;
+    color: var(--text-color);
   }
   
   p {
     margin-bottom: 5px;
+    color: var(--text-secondary);
     
     &:last-child {
       margin-bottom: 0;
@@ -104,6 +115,7 @@
     margin-bottom: 10px;
     position: relative;
     padding-left: 20px;
+    color: var(--text-color);
     
     &:before {
       content: '▹';

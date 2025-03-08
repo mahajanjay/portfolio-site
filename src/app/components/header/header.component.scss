@@ -5,11 +5,13 @@
 .navbar {
   padding: 15px 0;
   transition: all 0.3s ease;
+  background-color: var(--navbar-bg) !important;
 }
 
 .navbar-brand {
   font-weight: 700;
   font-size: 1.5rem;
+  color: var(--navbar-text);
 }
 
 .nav-link {
@@ -17,6 +19,7 @@
   margin: 0 10px;
   transition: color 0.3s ease;
   position: relative;
+  color: var(--navbar-text) !important;
 }
 
 .nav-link:after {

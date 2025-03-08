@@ -1,12 +1,13 @@
 .hero-section {
   padding: 120px 0 80px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-secondary) 100%);
   margin-bottom: 0;
 }
 
 .hero-text {
   h1 {
     margin-bottom: 20px;
+    color: var(--text-color);
   }
 }
 
@@ -22,7 +23,8 @@
 .service-card {
   border: none;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
+  background-color: var(--card-bg);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
@@ -41,7 +43,8 @@
   border: none;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
+  background-color: var(--card-bg);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
@@ -56,6 +59,10 @@
   
   .technologies {
     margin-top: 15px;
+  }
+
+  .card-title, .card-text {
+    color: var(--text-color);
   }
 }
 
