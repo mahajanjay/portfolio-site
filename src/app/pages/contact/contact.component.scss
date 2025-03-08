@@ -1,0 +1,123 @@
+.contact-section {
+  padding-top: 120px;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card, .contact-form-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  height: 100%;
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.contact-subtitle {
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 25px;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(13, 110, 253, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.contact-details {
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin-bottom: 0;
+    color: var(--secondary-color);
+    
+    a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(13, 110, 253, 0.1);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+  }
+}
+
+.contact-form {
+  label {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .form-control {
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+      border-color: #86b7fe;
+    }
+  }
+  
+  textarea {
+    resize: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-card {
+    margin-bottom: 30px;
+  }
+}

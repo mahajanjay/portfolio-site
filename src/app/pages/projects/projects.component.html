@@ -1,0 +1,78 @@
+<section class="projects-section section">
+  <div class="container">
+    <h1 class="section-title">My Projects</h1>
+    <p class="section-description text-center mb-5">
+      Here are some of the projects I've worked on using Angular, .NET Core, and SQL Server.
+      Each project demonstrates different aspects of my technical skills and problem-solving abilities.
+    </p>
+    
+    <div class="project-filters mb-5">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn" [class.btn-primary]="activeFilter === 'all'" 
+                [class.btn-outline-primary]="activeFilter !== 'all'" (click)="filterProjects('all')">
+          All
+        </button>
+        <button type="button" class="btn" [class.btn-primary]="activeFilter === 'Angular'" 
+                [class.btn-outline-primary]="activeFilter !== 'Angular'" (click)="filterProjects('Angular')">
+          Angular
+        </button>
+        <button type="button" class="btn" [class.btn-primary]="activeFilter === '.NET Core'" 
+                [class.btn-outline-primary]="activeFilter !== '.NET Core'" (click)="filterProjects('.NET Core')">
+          .NET Core
+        </button>
+        <button type="button" class="btn" [class.btn-primary]="activeFilter === 'SQL Server'" 
+                [class.btn-outline-primary]="activeFilter !== 'SQL Server'" (click)="filterProjects('SQL Server')">
+          SQL Server
+        </button>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 project-item" *ngFor="let project of filteredProjects">
+        <div class="card project-card h-100 fade-in">
+          <div class="project-image">
+            <img [src]="project.imageUrl" class="card-img-top" [alt]="project.title"
+                 onerror="this.src='https://via.placeholder.com/800x400?text=Project+Image'; this.onerror=null;">
+            <div class="project-links">
+              <a [href]="project.githubUrl" *ngIf="project.githubUrl" target="_blank" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a [href]="project.liveUrl" *ngIf="project.liveUrl" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{{project.title}}</h3>
+            <p class="card-text">{{project.description}}</p>
+            <div class="technologies">
+              <span class="badge bg-primary me-1 mb-1" *ngFor="let tech of project.technologies">{{tech}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5" *ngIf="filteredProjects.length === 0">
+      <div class="alert alert-info">
+        No projects found matching the selected filter.
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-body text-center">
+            <h2 class="card-title mb-4">Want to see more?</h2>
+            <p class="mb-4">
+              Check out my GitHub profile for more projects and code samples.
+            </p>
+            <a href="https://github.com/" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github me-2"></i> Visit My GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

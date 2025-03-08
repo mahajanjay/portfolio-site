@@ -1,0 +1,42 @@
+.header {
+  margin-bottom: 60px;
+}
+
+.navbar {
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link.active:after,
+.nav-link:hover:after {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .nav-link {
+    margin: 5px 0;
+  }
+}
