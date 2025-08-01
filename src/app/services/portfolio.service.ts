@@ -36,9 +36,9 @@ export class PortfolioService {
   private _projects: Project[] = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce application with product catalog, shopping cart, and payment integration.',
-      technologies: ['Angular', '.NET Core', 'SQL Server', 'Entity Framework', 'Bootstrap'],
+      title: 'TeDB Manager',
+      description: '',
+      technologies: ['Angular', '.NET Core', 'OAuth'],
       imageUrl: 'assets/images/project1.jpg',
       githubUrl: 'https://github.com/',
       liveUrl: 'https://example.com/'
@@ -50,23 +50,6 @@ export class PortfolioService {
       technologies: ['Angular', '.NET Core', 'SQL Server', 'SignalR', 'Material Design'],
       imageUrl: 'assets/images/project2.jpg',
       githubUrl: 'https://github.com/'
-    },
-    {
-      id: 3,
-      title: 'Healthcare Portal',
-      description: 'A patient management system for healthcare providers with appointment scheduling and medical records.',
-      technologies: ['Angular', '.NET Core', 'SQL Server', 'Identity Server', 'Bootstrap'],
-      imageUrl: 'assets/images/project3.jpg',
-      liveUrl: 'https://example.com/'
-    },
-    {
-      id: 4,
-      title: 'Real Estate Listing App',
-      description: 'A property listing application with search filters, map integration, and user accounts.',
-      technologies: ['Angular', '.NET Core', 'SQL Server', 'Google Maps API', 'Azure Services'],
-      imageUrl: 'assets/images/project4.jpg',
-      githubUrl: 'https://github.com/',
-      liveUrl: 'https://example.com/'
     }
   ];
 
